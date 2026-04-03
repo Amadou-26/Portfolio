@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Papa Amadou Thomas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+      <a href="../index.html" class="nav__logo">PAT<span class="accent">.</span></a>
+      <ul class="nav__links">
+        <li><a href="../index.html"    class="nav__link">Accueil</a></li>
+        <li><a href="projets.html"     class="nav__link">Projets</a></li>
+        <li><a href="about.html"       class="nav__link">À propos</a></li>
+        <li><a href="contact.html"     class="nav__link active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- EN-TÊTE -->
+    <section class="contact-hero section">
+      <div class="container">
+        <p class="section-label">Échangeons</p>
+        <h1 class="title-xl">Me contacter</h1>
+        <p class="contact-hero__desc">
+          Une question, une proposition ou simplement envie d'échanger ?
+          Remplis l'un des formulaires ci-dessous et je te répondrai rapidement.
+        </p>
+      </div>
+    </section>
+
+    <!-- INFOS + FORMULAIRE CONTACT -->
+    <section class="section contact-main">
+      <div class="container contact-grid">
+
+        <!-- Infos de contact -->
+        <aside class="contact-info">
+          <h2 class="contact-info__title">Informations</h2>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">📧</span>
+            <div>
+              <strong>E-mail</strong>
+              <span>papaamadouthomas2617@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">📍</span>
+            <div>
+              <strong>Localisation</strong>
+              <span>Dakar, Sénégal</span>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">🐙</span>
+            <div>
+              <strong>GitHub</strong>
+              <a href="https://github.com/Amadou-26" target="_blank" rel="noopener">github.com/Amadou-26</a>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">💼</span>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="www.linkedin.com/in/papa-amadou-thomas-2bb1b03b4" target="_blank" rel="noopener">linkedin.com/in/PAT</a>
+            </div>
+          </div>
+
+          <div class="contact-info__availability">
+            <span class="availability-dot"></span>
+            Disponible pour un stage ou une opportunité
+          </div>
+        </aside>
+
+        <!-- Formulaire 1 : Contact simple -->
+        <div class="form-wrapper">
+          <h2 class="form-title">Envoyer un message</h2>
+          <form class="cform" id="contactForm" action="#" method="POST" novalidate>
+
+            <div class="cform__row">
+              <div class="cform__group">
+                <label class="cform__label" for="name">Nom complet *</label>
+                <input class="cform__input" type="text" id="name" name="name"
+                  placeholder="Votre nom" required />
+              </div>
+              <div class="cform__group">
+                <label class="cform__label" for="email">E-mail *</label>
+                <input class="cform__input" type="email" id="email" name="email"
+                  placeholder="vous@exemple.com" required />
+              </div>
+            </div>
+
+            <div class="cform__group">
+              <label class="cform__label" for="subject">Sujet</label>
+              <input class="cform__input" type="text" id="subject" name="subject"
+                placeholder="Sujet de votre message" />
+            </div>
+
+            <div class="cform__group">
+              <label class="cform__label" for="message">Message *</label>
+              <textarea class="cform__textarea" id="message" name="message"
+                placeholder="Votre message ici…" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Envoyer →</button>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Formulaire 2 : Demande de projet -->
+    <section class="section project-request-section">
+      <div class="container">
+        <p class="section-label">Collaboration</p>
+        <h2 class="title-lg" style="margin-bottom: var(--sp-sm);">Soumettre un projet</h2>
+        <p class="form-subtitle">Tu as un projet en tête et cherches un développeur ? Décris-le ici.</p>
+
+        <form class="cform cform--wide" id="projectForm" action="#" method="POST" novalidate>
+
+          <div class="cform__row">
+            <div class="cform__group">
+              <label class="cform__label" for="p-name">Votre nom *</label>
+              <input class="cform__input" type="text" id="p-name" name="client_name"
+                placeholder="Votre nom" required />
+            </div>
+            <div class="cform__group">
+              <label class="cform__label" for="p-email">E-mail *</label>
+              <input class="cform__input" type="email" id="p-email" name="client_email"
+                placeholder="vous@exemple.com" required />
+            </div>
+          </div>
+
+          <div class="cform__row">
+            <div class="cform__group">
+              <label class="cform__label" for="p-type">Type de projet *</label>
+              <select class="cform__select" id="p-type" name="project_type" required>
+                <option value="" disabled selected>Sélectionner…</option>
+                <option value="site-vitrine">Site vitrine</option>
+                <option value="application-web">Application web</option>
+                <option value="systeme-embarque">Système embarqué / IoT</option>
+                <option value="reseau">Infrastructure réseau</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="cform__group">
+              <label class="cform__label" for="p-budget">Budget estimé</label>
+              <input class="cform__input" type="text" id="p-budget" name="budget"
+                placeholder="Ex : 100 000 – 300 000 FCFA" />
+            </div>
+          </div>
+
+          <div class="cform__group">
+            <label class="cform__label" for="p-desc">Description du projet *</label>
+            <textarea class="cform__textarea" id="p-desc" name="project_desc"
+              placeholder="Décris ton projet : objectifs, fonctionnalités souhaitées, délais…" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Soumettre le projet →</button>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2025 Papa Amadou Thomas — Tous droits réservés.</p>
+      <div class="footer__links">
+        <a href="https://github.com/Amadou-26" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/papa-amadou-thomas-2bb1b03b4" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../images/CV_Papa_Amadou_Thomas.pdf" download>Télécharger CV</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

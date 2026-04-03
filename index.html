@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papa Amadou Thomas — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">PAT<span class="accent">.</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html"          class="nav__link active">Accueil</a></li>
+        <li><a href="pages/projets.html"  class="nav__link">Projets</a></li>
+        <li><a href="pages/about.html"    class="nav__link">À propos</a></li>
+        <li><a href="pages/contact.html"  class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="section-label">Étudiant en Génie Logiciel Administration Réseaux</p>
+        <h1 class="title-xl">Papa Amadou<br /><span class="accent">Thomas</span></h1>
+        <p class="hero__desc">
+          Passionné par l'innovation technologique, je conçois des solutions logicielles
+          et des systèmes embarqués. Étudiant à l'ESTM, je transforme chaque projet
+          en une opportunité d'apprendre et de créer.
+        </p>
+        <div class="hero__cta">
+          <a href="pages/projets.html" class="btn btn-primary">Voir mes projets</a>
+          <a href="pages/contact.html" class="btn btn-outline">Me contacter</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__avatar">
+          <img src="./images/ma photo.jpeg" alt="Photo de Papa Amadou Thomas" />
+        </div>
+        <div class="hero__badge">
+          <span class="hero__badge-icon">🎓</span>
+          <div>
+            <strong>ESTM</strong>
+            <span>Licence 2 en GLAR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats__grid">
+      <div class="stat">
+        <span class="stat__num">4</span>
+        <span class="stat__label">Projets réalisés</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">2</span>
+        <span class="stat__label">Stages effectués</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">2+</span>
+        <span class="stat__label">Ans d'expérience</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">5+</span>
+        <span class="stat__label">Technologies maîtrisées</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section class="skills section">
+    <div class="container">
+      <p class="section-label">Ce que je sais faire</p>
+      <div class="skills__header">
+        <h2 class="title-lg">Compétences</h2>
+        <a href="pages/about.html" class="btn btn-outline btn-sm">Voir tout →</a>
+      </div>
+      <div class="skills__grid">
+
+        <div class="skill-card">
+          <div class="skill-card__icon">💻</div>
+          <h3>Développement</h3>
+          <p>Langage C, MySQL, SQLite — structures de données, gestion mémoire, applications avec BDD.</p>
+          <div class="skill-card__tags">
+            <span class="tag">C</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">SQLite</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">🔌</div>
+          <h3>IoT & Embarqué</h3>
+          <p>Prototypage ESP32, Arduino. Capteurs ultrasons, DHT11, communication sans fil.</p>
+          <div class="skill-card__tags">
+            <span class="tag">ESP32</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">C++</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">🌐</div>
+          <h3>Réseaux</h3>
+          <p>Configuration Cisco, protocoles EIGRP, routage statique, VLANs sur Packet Tracer.</p>
+          <div class="skill-card__tags">
+            <span class="tag">Cisco</span>
+            <span class="tag">EIGRP</span>
+            <span class="tag">VLANs</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">🛡️</div>
+          <h3>Systèmes & Sécurité</h3>
+          <p>Windows Server, VirtualBox, Kali Linux — administration et environnements de tests Pentest.</p>
+          <div class="skill-card__tags">
+            <span class="tag">Windows Server</span>
+            <span class="tag">Kali Linux</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS PHARES -->
+  <section class="projects section">
+    <div class="container">
+      <p class="section-label">Réalisations</p>
+      <div class="projects__header">
+        <h2 class="title-lg">Projets phares</h2>
+        <a href="pages/projets.html" class="btn btn-outline btn-sm">Tous les projets →</a>
+      </div>
+      <div class="projects__grid">
+
+        <article class="project-card project-card--featured">
+          <div class="project-card__img project-card__img--placeholder">
+            <span class="pcard__placeholder-text">🗑️ Poubelle intelligente</span>
+            <span class="project-card__badge">IoT</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Poubelle Intelligente Connectée</h3>
+            <p class="project-card__desc">Prototype de gestion intelligente des déchets basé sur un microcontrôleur ESP32. Ouverture automatique et monitoring en temps réel via tableau de bord web.</p>
+            <div class="project-card__tags">
+              <span class="tag">C++</span>
+              <span class="tag">ESP32</span>
+              <span class="tag">IoT</span>
+            </div>
+            <a href="pages/projets.html" class="btn btn-primary btn-sm">Voir le projet →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__img">
+            <img src="./images/projet-repertoire.png" alt="Gestion Répertoire Téléphonique" />
+            <span class="project-card__badge">C / MySQL</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Répertoire Téléphonique</h3>
+            <p class="project-card__desc">Application de gestion de contacts avec structures de données en C et persistance MySQL.</p>
+            <div class="project-card__tags">
+              <span class="tag">C</span>
+              <span class="tag">MySQL</span>
+            </div>
+            <a href="pages/projets.html" class="btn btn-outline btn-sm">Voir →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__img">
+            <img src="./images/projet-pollution.png" alt="Projet ETRE LA SOLUTION" />
+            <span class="project-card__badge">Innovation</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Éradication de la Pollution</h3>
+            <p class="project-card__desc">Co-fondateur d'une initiative de gestion des déchets à Dakar — poubelles électroniques et économie circulaire.</p>
+            <div class="project-card__tags">
+              <span class="tag">IoT</span>
+              <span class="tag">Social</span>
+            </div>
+            <a href="pages/projets.html" class="btn btn-outline btn-sm">Voir →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2025 Papa Amadou Thomas — Tous droits réservés.</p>
+      <div class="footer__links">
+        <a href="https://github.com/Amadou-26" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/papa-amadou-thomas-2bb1b03b4" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="./images/CV_Papa_Amadou_Thomas.pdf" download>Télécharger CV</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
