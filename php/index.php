@@ -1,4 +1,8 @@
-<?php require 'fonctions.php'; ?>
+<?php 
+ini_set('display_errors', 0);
+error_reporting(0);
+define('ACCES_AUTORISE', true);
+require 'fonctions.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -20,7 +24,7 @@
 <section class="hero">
   <div class="container hero__inner">
     <div class="hero__text">
-      <p class="section-label">Étudiant en Génie Logiciel & Réseaux</p>
+      <p class="section-label">Étudiant en Génie Logiciel & Administration Réseaux</p>
       <h1 class="title-xl">Papa Amadou<br /><span class="accent">Thomas</span></h1>
       <p class="hero__desc">
         Passionné par l'innovation technologique, je conçois des solutions logicielles

@@ -1,4 +1,8 @@
 <?php
+session_start();
+ini_set('display_errors', 0);
+error_reporting(0);
+define('ACCES_AUTORISE', true);
 require 'fonctions.php';
 
 $contact_erreurs = [];
@@ -9,7 +13,9 @@ $contact_sujet   = '';
 $contact_message = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_contact'])) {
-    
+    if (!verifier_token($_POST['csrf_token'] ?? '')) {
+        die('Requête invalide.');
+    }
     $contact_nom     = nettoyer($_POST['nom']     ?? '');
     $contact_email   = nettoyer($_POST['email']   ?? '');
     $contact_sujet   = nettoyer($_POST['sujet']   ?? '');
@@ -39,7 +45,9 @@ $projet_succes  = false;
 $demande        = ['nom' => '', 'email' => '', 'type' => '', 'description' => '', 'budget' => ''];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_projet'])) {
-   
+   if (!verifier_token($_POST['csrf_token'] ?? '')) {
+        die('Requête invalide.');
+    }
     $demande['nom']         = nettoyer($_POST['p_nom']         ?? '');
     $demande['email']       = nettoyer($_POST['p_email']       ?? '');
     $demande['type']        = nettoyer($_POST['p_type']        ?? '');
@@ -120,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_projet'])) {
           <span>🐙</span>
           <div>
             <strong>GitHub</strong>
-            <a href="https://github.com/" target="_blank" rel="noopener">github.com/pat</a>
+            <a href="https://github.com/Amadou-26" target="_blank" rel="noopener">github.com/Amadou-26</a>
           </div>
         </div>
         <div class="contact-info__availability">
@@ -192,7 +200,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_projet'])) {
               <span class="field-error"><?= $contact_erreurs['message'] ?></span>
             <?php endif; ?>
           </div>
-
+		<input type="hidden" name="csrf_token" value="<?=htmlspecialchars(generer_token()) ?>" />
           <button type="submit" class="btn btn-primary">Envoyer →</button>
         </form>
       </div>
@@ -286,7 +294,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_projet'])) {
             <span class="field-error"><?= $projet_erreurs['description'] ?></span>
           <?php endif; ?>
         </div>
-
+		<input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generer_token()) ?>" />
         <button type="submit" class="btn btn-primary">Soumettre le projet →</button>
       </form>
 

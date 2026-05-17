@@ -1,5 +1,8 @@
 <?php
-
+if (!defined('ACCES_AUTORISE')) {
+    http_response_code(403);
+    die('Accès interdit.');
+}
 
 function nettoyer(string $valeur): string {
     return htmlspecialchars(trim($valeur));
@@ -79,4 +82,20 @@ function filtrer_projets(array $projets, string $mot_cle): array {
         }
     }
     return $resultats;
+}
+function generer_token(): string {
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    if (empty($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+    return $_SESSION['csrf_token'];
+}
+
+function verifier_token(string $token): bool {
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
 }
